@@ -1,3 +1,3 @@
 Using Web Services
 
-visit <a href='http://yewgen.pythonanywhere.com/'>http://yewgen.pythonanywhere.com/</a>
+visit <a href='http://yewgen.pythonanywhere.com/'>yewgen.pythonanywhere</a>
