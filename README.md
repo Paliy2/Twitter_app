@@ -2,7 +2,7 @@ Using Web Services
 GitHub:
 https://apps.twitter.com/ 
 
-To visit site go to<a href='http://yewgen.pythonanywhere.com/'>yewgen.pythonanywhere</a>
+To visit site go to <a href='http://yewgen.pythonanywhere.com/'>yewgen.pythonanywhere</a>
 
 You need to enter a Twitter account and application will create a map with 15 friends marked on it
 
