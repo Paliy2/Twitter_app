@@ -1,9 +1,10 @@
 import folium
 from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
+import os
 
 
-def generate_map(name_loc):
+def generate_map(name_loc, map_name):
     '''
     dict -> ()
     {name: loc}
@@ -16,7 +17,8 @@ def generate_map(name_loc):
                                            tooltip=key))
     map.add_child(name_layer)
     map.add_child(folium.LayerControl())
-    map.save('templates/Map.html')
+    map.save('mysite/{}'.format(map_name))
+
     print('Check map in tests/Map.html')
 
 
@@ -39,11 +41,7 @@ def get_coordinates(data):
     return all_locs
 
 
-def create_map(data):
+def create_map(data, map_name):
     # data = json_to_dict(file)
     data = get_coordinates(data)
-    generate_map(data)
-
-
-
-
+    generate_map(data, map_name)
