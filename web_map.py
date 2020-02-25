@@ -6,8 +6,13 @@ import os
 
 def generate_map(name_loc, map_name):
     '''
-    dict -> ()
-    {name: loc}
+    dict, str -> ()
+    Current data:
+    {name: locatoin}
+    Function takes dictionary to create a web map with Folium
+    and also name of the map.
+    WARNING!!!
+    Directory should be full path to work properly
     '''
 
     map = folium.Map()
@@ -42,6 +47,11 @@ def get_coordinates(data):
 
 
 def create_map(data, map_name):
+    '''
+    dict, str -> ()
+    Function converts given data to a proper format and
+    than creates a map with a map_name name and proper new data
+    '''
     # data = json_to_dict(file)
     data = get_coordinates(data)
     generate_map(data, map_name)
