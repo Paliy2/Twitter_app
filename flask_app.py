@@ -23,7 +23,7 @@ ctx.verify_mode = ssl.CERT_NONE
 def find_number(directory):
     '''
     str -> int
-    list directory for Map.html files and get the last created file
+    list directory for Map.html files and get the number of last created file
     '''
     arr = os.listdir(directory)
     max_num = 0
@@ -40,6 +40,7 @@ number = find_number('/home/yewgen/mysite/templates')
 app = Flask(__name__)
 
 
+# disable cashe - despite doesn't help
 def no_cache(view):
     @wraps(view)
     def no_cache(*args, **kwargs):
@@ -90,6 +91,15 @@ def Map():
 
 
 def main(name):
+    '''
+    str -> int
+    Fuction takes the name of Twitter account you want to view
+    Then it takes all needed data(name and location)
+    and generates a web map based on this data
+    Function also counts a number of created files
+    and returns the number from 0 to 9 that should be considered
+    during map generation
+    '''
     global number
     while True:
         acct = name
